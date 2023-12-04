@@ -1,6 +1,9 @@
-import java.util.Scanner;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Main {
+	private static Logger log = LoggerFactory.getLogger(Main.class);
+
 	public static void main(String[] args) {
 
 		// ***************************************** ECCEZIONI UNCHECKED ***********************************************
@@ -80,7 +83,7 @@ public class Main {
 		System.out.println("CIAO");
 */
 
-		Scanner input = new Scanner(System.in);
+/*		Scanner input = new Scanner(System.in);
 
 		try {
 			System.out.println("Dammi il primo numero: ");
@@ -94,13 +97,18 @@ public class Main {
 			System.err.println(ex.getMessage());
 		} finally {
 			input.close(); // Lo scanner verrà chiuso correttamente sia in caso di errore che no
-		}
+		}*/
+
+		// ****************************** LOGBACK ***************************************
+
+		log.info("CIAO");
+		log.error("KABOOOM");
 
 	}
-
-/*	public static void print(String stringa) {
+/*
+	public static void print(String stringa) {
 		System.out.println(stringa);
-		// print(stringa);
+		print(stringa);
 		// Esempio di Error: se chiamo all'infinito la stessa funzione mi ritroverò ad avere uno StackoverflowError
 	}*/
 }
